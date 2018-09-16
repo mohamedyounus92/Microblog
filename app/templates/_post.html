@@ -1,6 +1,13 @@
 	<table>
 		<tr valign="top">
 			<td><img src="{{ post.author.avatar(36) }}"></td>
-			<td>{{ post.author.username }} says: <br>{{ post.body }}</td>
+			<td>
+				{% if post.author.profile_name %}
+					{{ post.author.profile_name }}
+				{% else %}
+					{{ post.author.username }}
+				{% endif %}
+				 says: <br>{{ post.body }}
+			</td>
 		</tr>
 	</table>
