@@ -6,7 +6,7 @@
 		{% if current_user.profile_name %}
 			{{ current_user.profile_name }}
 		{% else %}
-			{{ current_user.profile_name }}
+			{{ current_user.username }}
 		{% endif %}
 	</h1>
 	{% for post in posts %}
